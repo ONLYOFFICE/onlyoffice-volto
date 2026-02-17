@@ -17,6 +17,7 @@
 import {
   OnlyofficeConfiguration,
   OnlyofficeEditor,
+  ToolbarActions,
   ToolbarConvert,
   ToolbarCreate,
   ToolbarMenu,
@@ -75,6 +76,10 @@ const applyConfig = (config) => {
       component: ToolbarMenu,
       wrapper: null,
     },
+    onlyofficeToolbarActions: {
+      component: ToolbarActions,
+      wrapper: null,
+    },
   };
 
   config.settings.controlpanels = [
@@ -97,7 +102,15 @@ const applyConfig = (config) => {
     },
     {
       component: OnlyofficeEditor,
+      path: '*/onlyoffice-view',
+    },
+    {
+      component: OnlyofficeEditor,
       path: '*/onlyoffice-edit',
+    },
+    {
+      component: OnlyofficeEditor,
+      path: '*/onlyoffice-review',
     },
   ];
 

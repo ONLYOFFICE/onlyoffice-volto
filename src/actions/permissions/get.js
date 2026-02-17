@@ -13,20 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import ToolbarActions from './ToolbarActions';
-import ToolbarConvert from './ToolbarConvert';
-import ToolbarCreate from './ToolbarCreate';
-import ToolbarMenu from './ToolbarMenu';
-import ToolbarOpen from './ToolbarOpen';
-import OnlyofficeConfiguration from './Views/OnlyofficeConfiguration';
-import OnlyofficeEditor from './Views/OnlyofficeEditor';
+import { ONLYOFFICE_VOLTO_PERMISSIONS_GET } from '../../constants/ActionTypes';
 
-export {
-  OnlyofficeConfiguration,
-  OnlyofficeEditor,
-  ToolbarActions,
-  ToolbarConvert,
-  ToolbarCreate,
-  ToolbarMenu,
-  ToolbarOpen,
-};
+export function getPermissions(path) {
+  return {
+    request: {
+      op: 'get',
+      path: `/@onlyoffice-volto-get-permissions${path}`,
+    },
+    type: ONLYOFFICE_VOLTO_PERMISSIONS_GET,
+  };
+}
+
+export function resetPermissionsState() {
+  return {
+    type: ONLYOFFICE_VOLTO_PERMISSIONS_GET + '_RESET',
+  };
+}

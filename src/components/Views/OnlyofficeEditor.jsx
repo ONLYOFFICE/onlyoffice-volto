@@ -38,7 +38,10 @@ const OnlyofficeEditor = () => {
 
   useEffect(() => {
     if (isClient && token) {
-      const path = pathname.replace('/onlyoffice-edit', '');
+      const path = pathname.replace(
+        /\/onlyoffice-(edit|view|review)$/,
+        '-onlyoffice-$1',
+      );
       dispatch(getConfig(path));
       return () => {
         dispatch(resetConfigState());
@@ -121,7 +124,7 @@ const OnlyofficeEditor = () => {
     return <Unauthorized />;
   }
 
-  const basePath = pathname.replace(/\/onlyoffice-edit$/, '');
+  const basePath = pathname.replace(/\/onlyoffice-(edit|review|view)$/, '');
 
   return (
     <Container className="onlyoffice-editor-container">

@@ -16,5 +16,6 @@
 export { getConfig, resetConfigState } from './config/get';
 export { convertFile, resetConvertedFileState } from './files/convert';
 export { createFile, resetCreatedFileState } from './files/create';
+export { getPermissions, resetPermissionsState } from './permissions/get';
 export { getForms, resetFormsState } from './settings/forms';
 export { resetSaveState, saveSettings } from './settings/save';

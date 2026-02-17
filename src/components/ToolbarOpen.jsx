@@ -15,11 +15,11 @@
  */
 import { Plug } from '@plone/volto/components/manage/Pluggable';
 import Icon from '@plone/volto/components/theme/Icon/Icon';
-import onlyofficeOpen from 'onlyoffice-volto/icons/onlyoffice-open.svg';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-import { Link, useLocation } from 'react-router-dom';
+import { Button } from 'semantic-ui-react';
+import onlyofficeOpen from 'onlyoffice-volto/icons/onlyoffice-open.svg';
 
 const messages = defineMessages({
   onlyofficeOpenTitle: {
@@ -29,27 +29,40 @@ const messages = defineMessages({
 });
 
 const ToolbarOpen = ({ token }) => {
-  const { pathname } = useLocation();
   const intl = useIntl();
 
   if (!__CLIENT__ || (__CLIENT__ && !token)) {
     return null;
   }
 
-  const path = pathname.endsWith('/') ? pathname.slice(0, -1) : pathname;
-
+  let cb = null;
   return (
-    <Plug pluggable="main.toolbar.top" id="toolbar-onlyoffice-open" order={99}>
-      <div className=" toolbar-onlyoffice-open" id="toolbar-onlyoffice-open">
-        <Link to={`${path}/onlyoffice-edit`}>
-          <Icon
-            name={onlyofficeOpen}
-            size="30px"
-            title={intl.formatMessage(messages.onlyofficeOpenTitle)}
-          />
-        </Link>
-      </div>
-    </Plug>
+    <>
+      <Plug pluggable="main.toolbar.bottom" id="onlyoffice-menu-blank">
+        {({ onClickHandler }) => {
+          cb = onClickHandler;
+        }}
+      </Plug>
+      <Plug pluggable="main.toolbar.top" id="onlyoffice-open">
+        {() => {
+          return (
+            <Button
+              className="show-onlyoffice-toolbar-open"
+              aria-label={intl.formatMessage(messages.onlyofficeOpenTitle)}
+              onClick={(e) => cb(e, 'onlyofficeToolbarActions')}
+              tabIndex={0}
+              id="show-onlyoffice-toolbar-open"
+            >
+              <Icon
+                name={onlyofficeOpen}
+                size="30px"
+                title={intl.formatMessage(messages.onlyofficeOpenTitle)}
+              />
+            </Button>
+          );
+        }}
+      </Plug>
+    </>
   );
 };
 

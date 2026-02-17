@@ -38,7 +38,7 @@ import clearSVG from '@plone/volto/icons/clear.svg';
 
 const messages = defineMessages({
   onlyofficeConvertTitle: {
-    defaultMessage: 'Convert',
+    defaultMessage: 'Convert with ONLYOFFICE',
     id: 'onlyoffice_convert_title',
   },
   onlyofficeConvertTypeDescription: {
@@ -124,15 +124,14 @@ const ToolbarConvert = ({ token }) => {
     setField({
       ...{
         choices: convertFormats.map((type) => [type, type]),
-        description: intl.formatMessage(
-          messages.onlyofficeConvertTypeDescription,
-        ),
         title: intl.formatMessage(messages.onlyofficeConvertTypeTitle),
         type: 'string',
       },
       id: 'targetType',
       value: selectedFormat,
-      onChange: onChangeField,
+      onChange: (id, value) => {
+        setSelectedFormat(value);
+      },
     });
   }, [intl, convertFormats, selectedFormat]);
 
@@ -144,10 +143,6 @@ const ToolbarConvert = ({ token }) => {
   if (!__CLIENT__ || (__CLIENT__ && !token)) {
     return null;
   }
-
-  const onChangeField = (id, value) => {
-    setSelectedFormat(value);
-  };
 
   const onCancel = () => setConvertModalOpen(false);
 
@@ -194,6 +189,19 @@ const ToolbarConvert = ({ token }) => {
               ) : (
                 <> </>
               )}
+              <div class="inline field help field-wrapper-targetType">
+                <div class="ui grid">
+                  <div class="stretched row">
+                    <div class="stretched twelve wide column">
+                      <p>
+                        {intl.formatMessage(
+                          messages.onlyofficeConvertTypeDescription,
+                        )}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <Field {...field} key={field.id} />
             </Form>
           </Modal.Content>

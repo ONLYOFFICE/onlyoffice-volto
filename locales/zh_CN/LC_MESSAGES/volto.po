@@ -1,20 +1,41 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-14 10:33+0000\n"
 "PO-Revision-Date: 2022-10-10 14:08+0300\n"
 "Last-Translator: \n"
-"Language-Team: \n"
 "Language: zh_CN\n"
-"MIME-Version: 1.0\n"
+"Language-Team: \n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
 "Language-Code: zh_CN\n"
 "Language-Name: 简体中文\n"
 "Preferred-Encodings: utf-8\n"
 "Domain: DOMAIN\n"
 "X-Generator: Poedit 3.1.1\n"
+
+#. Default: "Cancel"
+#: components/ToolbarConvert
+msgid "Cancel"
+msgstr ""
+
+#. Default: "Loading."
+#: components/ToolbarConvert
+msgid "Loading"
+msgstr ""
+
+#. Default: "Save"
+#: components/ToolbarConvert
+msgid "Save"
+msgstr ""
+
+#. Default: "There were some errors."
+#: components/ToolbarConvert
+msgid "There were some errors."
+msgstr ""
 
 #. Default: "Cancel"
 #: components/Views/OnlyofficeConfiguration
@@ -31,12 +52,12 @@ msgstr "ONLYOFFICE配置"
 msgid "onlyoffice_configuration_save"
 msgstr "保存"
 
-#. Default: "Settings saved successfully"
+#. Default: "Settings successfully saved"
 #: components/Views/OnlyofficeConfiguration
 msgid "onlyoffice_configuration_success_message"
 msgstr "设置已成功保存"
 
-#. Default: "Convert"
+#. Default: "Convert with ONLYOFFICE"
 #: components/ToolbarConvert
 msgid "onlyoffice_convert_title"
 msgstr "转换"
@@ -55,6 +76,16 @@ msgstr "目标类型："
 #: components/ToolbarCreate
 msgid "onlyoffice_create_title"
 msgstr "在ONLYOFFICE中创建"
+
+#. Default: "Edit with ONLYOFFICE"
+#: components/ToolbarActions
+msgid "onlyoffice_edit_title"
+msgstr ""
+
+#. Default: "Fill with ONLYOFFICE"
+#: components/ToolbarActions
+msgid "onlyoffice_fill_title"
+msgstr ""
 
 #. Default: "Spreadsheet"
 #: components/ToolbarMenu
@@ -81,7 +112,18 @@ msgstr "在ONLYOFFICE中创建"
 msgid "onlyoffice_menu_word"
 msgstr "文档"
 
-#. Default: "Open in ONLYOFFICE"
+#. Default: "Open with ONLYOFFICE"
+#: components/ToolbarActions
 #: components/ToolbarOpen
 msgid "onlyoffice_open_title"
 msgstr "在ONLYOFFICE中打开"
+
+#. Default: "Review with ONLYOFFICE"
+#: components/ToolbarActions
+msgid "onlyoffice_review_title"
+msgstr ""
+
+#. Default: "View with ONLYOFFICE"
+#: components/ToolbarActions
+msgid "onlyoffice_view_title"
+msgstr ""

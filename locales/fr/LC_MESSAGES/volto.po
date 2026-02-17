@@ -18,6 +18,26 @@ msgstr ""
 "X-Generator: Poedit 3.5\n"
 
 #. Default: "Cancel"
+#: components/ToolbarConvert
+msgid "Cancel"
+msgstr ""
+
+#. Default: "Loading."
+#: components/ToolbarConvert
+msgid "Loading"
+msgstr ""
+
+#. Default: "Save"
+#: components/ToolbarConvert
+msgid "Save"
+msgstr ""
+
+#. Default: "There were some errors."
+#: components/ToolbarConvert
+msgid "There were some errors."
+msgstr ""
+
+#. Default: "Cancel"
 #: components/Views/OnlyofficeConfiguration
 msgid "onlyoffice_configuration_cancel"
 msgstr "Annuler"
@@ -37,7 +57,7 @@ msgstr "Enregistrer"
 msgid "onlyoffice_configuration_success_message"
 msgstr "Paramètres enregistrés avec succès"
 
-#. Default: "Convert"
+#. Default: "Convert with ONLYOFFICE"
 #: components/ToolbarConvert
 msgid "onlyoffice_convert_title"
 msgstr "Convertir"
@@ -56,6 +76,16 @@ msgstr "Type de destination :"
 #: components/ToolbarCreate
 msgid "onlyoffice_create_title"
 msgstr "Créer avec ONLYOFFICE"
+
+#. Default: "Edit with ONLYOFFICE"
+#: components/ToolbarActions
+msgid "onlyoffice_edit_title"
+msgstr ""
+
+#. Default: "Fill with ONLYOFFICE"
+#: components/ToolbarActions
+msgid "onlyoffice_fill_title"
+msgstr ""
 
 #. Default: "Spreadsheet"
 #: components/ToolbarMenu
@@ -82,7 +112,18 @@ msgstr "Créer avec ONLYOFFICE"
 msgid "onlyoffice_menu_word"
 msgstr "Document"
 
-#. Default: "Open in ONLYOFFICE"
+#. Default: "Open with ONLYOFFICE"
+#: components/ToolbarActions
 #: components/ToolbarOpen
 msgid "onlyoffice_open_title"
 msgstr "Ouvrir dans ONLYOFFICE"
+
+#. Default: "Review with ONLYOFFICE"
+#: components/ToolbarActions
+msgid "onlyoffice_review_title"
+msgstr ""
+
+#. Default: "View with ONLYOFFICE"
+#: components/ToolbarActions
+msgid "onlyoffice_view_title"
+msgstr ""

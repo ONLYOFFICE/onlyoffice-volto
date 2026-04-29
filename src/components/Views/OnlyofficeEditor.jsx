@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import Toast from '@plone/volto/components/manage/Toast/Toast';
 import Toolbar from '@plone/volto/components/manage/Toolbar/Toolbar';
 import Icon from '@plone/volto/components/theme/Icon/Icon';
 import Unauthorized from '@plone/volto/components/theme/Unauthorized/Unauthorized';
@@ -21,6 +22,7 @@ import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { Container } from 'semantic-ui-react';
 
 import { getConfig, resetConfigState } from '../../actions';
@@ -53,23 +55,32 @@ const OnlyofficeEditor = () => {
     if (!onlyofficeConfig.loaded) return;
 
     const config = JSON.parse(onlyofficeConfig.nutsnames.editorCfg);
+
+    let demo = null;
+    if (onlyofficeConfig.nutsnames.demo) {
+      try {
+        demo = JSON.parse(onlyofficeConfig.nutsnames.demo);
+      } catch (e) {
+        // ignore invalid JSON
+      }
+    }
+
+    if (demo && demo.message) {
+      toast.warning(
+        <Toast warning title="ONLYOFFICE" content={demo.message} />,
+        { autoClose: false },
+      );
+    }
+
     const script = document.createElement('script');
     script.src = `${onlyofficeConfig.nutsnames.docUrl}web-apps/apps/api/documents/api.js?shardkey=${config.document.key}`;
     script.async = true;
 
     const initializeEditor = () => {
       let docEditor;
-      const { demo } = onlyofficeConfig;
-
-      const onAppReady = () => {
-        if (demo) {
-          docEditor.showMessage(demo.message);
-        }
-      };
 
       const editorConfig = {
         ...config,
-        events: { onAppReady },
         height: '600px',
         width: '100%',
       };

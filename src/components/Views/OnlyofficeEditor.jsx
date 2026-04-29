@@ -52,13 +52,13 @@ const OnlyofficeEditor = () => {
   useEffect(() => {
     if (!onlyofficeConfig.loaded) return;
 
+    const config = JSON.parse(onlyofficeConfig.nutsnames.editorCfg);
     const script = document.createElement('script');
-    script.src = `${onlyofficeConfig.nutsnames.docUrl}web-apps/apps/api/documents/api.js`;
+    script.src = `${onlyofficeConfig.nutsnames.docUrl}web-apps/apps/api/documents/api.js?shardkey=${config.document.key}`;
     script.async = true;
 
     const initializeEditor = () => {
       let docEditor;
-      const config = JSON.parse(onlyofficeConfig.nutsnames.editorCfg);
       const { demo } = onlyofficeConfig;
 
       const onAppReady = () => {

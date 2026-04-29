@@ -114,7 +114,7 @@ const OnlyofficeEditor = () => {
         return;
       }
 
-      // eslint-disable-next-line no-undef
+      // eslint-disable-next-line no-undef, no-unused-vars
       docEditor = new DocsAPI.DocEditor('onlyofficeEditor', editorConfig);
     };
 

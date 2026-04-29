@@ -58,7 +58,7 @@ const ToolbarActions = () => {
   }, []);
 
   useEffect(() => {
-    const path = pathname.replace(/\/onlyoffice-(edit|review|view)$/, '');
+    const path = pathname.replace(/\/onlyoffice-(edit|review|view|fill)$/, '');
     if (isClient) {
       dispatch(getPermissions(path));
       return () => {

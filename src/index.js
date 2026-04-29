@@ -112,6 +112,10 @@ const applyConfig = (config) => {
       component: OnlyofficeEditor,
       path: '*/onlyoffice-review',
     },
+    {
+      component: OnlyofficeEditor,
+      path: '*/onlyoffice-fill',
+    },
   ];
 
   return config;

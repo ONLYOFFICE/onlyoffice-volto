@@ -30,8 +30,6 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Publish to npm
         run: pnpm publish --provenance --access public --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Get Info
         run: |
           echo "version=$(grep -Eo '[0-9]+(\.[0-9]+)+' CHANGELOG.md | head -n 1)" >> $GITHUB_OUTPUT

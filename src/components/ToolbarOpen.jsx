@@ -19,7 +19,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import { Button } from 'semantic-ui-react';
-import onlyofficeOpen from 'onlyoffice-volto/icons/onlyoffice-open.svg';
+import onlyofficeOpen from '@onlyoffice/volto/icons/onlyoffice-open.svg';
 
 const messages = defineMessages({
   onlyofficeOpenTitle: {

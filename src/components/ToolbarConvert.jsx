@@ -15,7 +15,7 @@
  */
 import { Plug } from '@plone/volto/components/manage/Pluggable';
 import Icon from '@plone/volto/components/theme/Icon/Icon';
-import onlyofficeConvertSVG from 'onlyoffice-volto/icons/onlyoffice-convert.svg';
+import onlyofficeConvertSVG from '@onlyoffice/volto/icons/onlyoffice-convert.svg';
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { FormattedMessage, defineMessages, useIntl } from 'react-intl';

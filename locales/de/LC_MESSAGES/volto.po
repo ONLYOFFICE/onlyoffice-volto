@@ -1,0 +1,128 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Plone\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-07T10:19:41.979Z\n"
+"PO-Revision-Date: 2025-04-07T10:19:41.979Z\n"
+"Last-Translator: German <https://github.com/plone/volto/issues>\n"
+"Language: de\n"
+"Language-Team: German <https://github.com/plone/volto/issues>\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Language-Code: de\n"
+"Language-Name: Deutsch\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"X-Is-Fallback-For: de-at de-li de-lu de-ch de-de\n"
+
+#. Default: "Cancel"
+#: components/ToolbarConvert
+msgid "Cancel"
+msgstr ""
+
+#. Default: "Loading."
+#: components/ToolbarConvert
+msgid "Loading"
+msgstr ""
+
+#. Default: "Save"
+#: components/ToolbarConvert
+msgid "Save"
+msgstr ""
+
+#. Default: "There were some errors."
+#: components/ToolbarConvert
+msgid "There were some errors."
+msgstr ""
+
+#. Default: "Cancel"
+#: components/Views/OnlyofficeConfiguration
+msgid "onlyoffice_configuration_cancel"
+msgstr "Abbrechen"
+
+#. Default: "ONLYOFFICE Configuration"
+#: components/Views/OnlyofficeConfiguration
+msgid "onlyoffice_configuration_config_title"
+msgstr "ONLYOFFICE-Konfiguration"
+
+#. Default: "Save"
+#: components/Views/OnlyofficeConfiguration
+msgid "onlyoffice_configuration_save"
+msgstr "Speichern"
+
+#. Default: "Settings successfully saved"
+#: components/Views/OnlyofficeConfiguration
+msgid "onlyoffice_configuration_success_message"
+msgstr "Einstellungen erfolgreich gespeichert"
+
+#. Default: "Convert with ONLYOFFICE"
+#: components/ToolbarConvert
+msgid "onlyoffice_convert_title"
+msgstr "Konvertieren"
+
+#. Default: "Select file type you want to download"
+#: components/ToolbarConvert
+msgid "onlyoffice_convert_type_description"
+msgstr "Wählen Sie den Dateityp aus, den Sie herunterladen möchten"
+
+#. Default: "Target type:"
+#: components/ToolbarConvert
+msgid "onlyoffice_convert_type_title"
+msgstr "Zieltyp:"
+
+#. Default: "Create with ONLYOFFICE"
+#: components/ToolbarCreate
+msgid "onlyoffice_create_title"
+msgstr "Mit ONLYOFFICE erstellen"
+
+#. Default: "Edit with ONLYOFFICE"
+#: components/ToolbarActions
+msgid "onlyoffice_edit_title"
+msgstr ""
+
+#. Default: "Fill with ONLYOFFICE"
+#: components/ToolbarActions
+msgid "onlyoffice_fill_title"
+msgstr ""
+
+#. Default: "Spreadsheet"
+#: components/ToolbarMenu
+msgid "onlyoffice_menu_cell"
+msgstr "Tabellenkalkulation"
+
+#. Default: "PDF form"
+#: components/ToolbarMenu
+msgid "onlyoffice_menu_pdf"
+msgstr "PDF-Formular"
+
+#. Default: "Presentation"
+#: components/ToolbarMenu
+msgid "onlyoffice_menu_slide"
+msgstr "Präsentation"
+
+#. Default: "Create with ONLYOFFICE"
+#: components/ToolbarMenu
+msgid "onlyoffice_menu_title"
+msgstr "Mit ONLYOFFICE erstellen"
+
+#. Default: "Document"
+#: components/ToolbarMenu
+msgid "onlyoffice_menu_word"
+msgstr "Dokument"
+
+#. Default: "Open with ONLYOFFICE"
+#: components/ToolbarActions
+#: components/ToolbarOpen
+msgid "onlyoffice_open_title"
+msgstr "In ONLYOFFICE öffnen"
+
+#. Default: "Review with ONLYOFFICE"
+#: components/ToolbarActions
+msgid "onlyoffice_review_title"
+msgstr ""
+
+#. Default: "View with ONLYOFFICE"
+#: components/ToolbarActions
+msgid "onlyoffice_view_title"
+msgstr ""

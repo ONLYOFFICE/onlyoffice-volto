@@ -1,0 +1,73 @@
+{
+  "name": "onlyoffice-volto",
+  "version": "1.0.0",
+  "description": "This integration allows you to seamlessly edit, create, and convert files within your Volto environment using ONLYOFFICE Docs.",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ONLYOFFICE/onlyoffice-volto/issues",
+    "email": "support@onlyoffice.com"
+  },
+  "homepage": "https://github.com/ONLYOFFICE/onlyoffice-volto",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ONLYOFFICE/onlyoffice-volto.git"
+  },
+  "author": "Ascensio System SIA <integration@onlyoffice.com>",
+  "maintainers": [
+    "Ascensio System SIA <integration@onlyoffice.com> (https://www.onlyoffice.com)"
+  ],
+  "keywords": [
+    "onlyoffice-volto",
+    "onlyoffice",
+    "volto",
+    "plone"
+  ],
+  "main": "src/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "i18n": "rm -rf build/messages && NODE_ENV=production i18n --addon",
+    "lint": "eslint --max-warnings=0 src/**/*.{js,jsx,ts,tsx}",
+    "lint:fix": "eslint --fix src/**/*.{js,jsx,ts,tsx}",
+    "prettier": "prettier --check src/**/*.{js,jsx,ts,tsx}",
+    "prettier:fix": "prettier --write src/**/*.{js,jsx,ts,tsx}",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@plone/scripts": "*"
+  },
+  "peerDependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@plone/scripts": "^3.6.1",
+    "babel-plugin-react-intl": "5.1.17",
+    "babel-preset-razzle": "4.2.18",
+    "eslint": "8.54.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-config-react-app": "7.0.1",
+    "eslint-plugin-import": "2.29.0",
+    "eslint-plugin-jsx-a11y": "6.8.0",
+    "eslint-plugin-prettier": "5.0.1",
+    "eslint-plugin-react": "7.33.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "husky": "^9.1.7",
+    "prettier": "3.1.0"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": "*.overrides",
+        "options": {
+          "parser": "less"
+        }
+      }
+    ]
+  }
+}

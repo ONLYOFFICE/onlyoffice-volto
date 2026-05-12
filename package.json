@@ -1,6 +1,6 @@
 {
   "name": "onlyoffice-volto",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0",
   "description": "This integration allows you to seamlessly edit, create, and convert files within your Volto environment using ONLYOFFICE Docs.",
   "license": "Apache-2.0",
   "bugs": {

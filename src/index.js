@@ -24,7 +24,7 @@ import {
   ToolbarOpen,
 } from './components';
 import { getFormatsWithConvertOptions, getSupportedFormats } from './helpers';
-import onlyofficeControlpanel from 'onlyoffice-volto/icons/onlyoffice-controlpanel.svg';
+import onlyofficeControlpanel from '@onlyoffice/volto/icons/onlyoffice-controlpanel.svg';
 import reducers from './reducers';
 
 const applyConfig = (config) => {

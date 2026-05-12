@@ -135,7 +135,10 @@ const OnlyofficeEditor = () => {
     return <Unauthorized />;
   }
 
-  const basePath = pathname.replace(/\/onlyoffice-(edit|review|view|fill)$/, '');
+  const basePath = pathname.replace(
+    /\/onlyoffice-(edit|review|view|fill)$/,
+    '',
+  );
 
   return (
     <Container className="onlyoffice-editor-container">

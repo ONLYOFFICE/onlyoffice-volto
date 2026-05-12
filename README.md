@@ -27,18 +27,18 @@ uvx cookieplone
 
 During the setup process, follow these steps:
 
-- **Add-on Title (Volto Add-on)**: Enter `onlyoffice-volto`.
+- **Add-on Title (Volto Add-on)**: Enter `@onlyoffice/volto`.
 - For the remaining steps, use the default options.
 
 **Step 3: Replace the generated add-on with the existing one**
 
-- Navigate to the `home\onlyoffice-volto\packages` directory.
-- Delete the `onlyoffice-volto` directory inside the `packages` folder.
+- Navigate to the `home\volto\packages` directory.
+- Delete the `volto` directory inside the `packages` folder.
 - Replace it with the existing add-on from this repository.
 
 **Step 4: Install and start the add-on**
 
-In the `home\onlyoffice-volto` directory, run the following commands one by one:
+In the `home\volto` directory, run the following commands one by one:
 
 ```
 make install
@@ -53,13 +53,13 @@ make start
 
 **Step 2: Enable the add-on**
 
-Unzip the ONLYOFFICE add-on into the `packages` directory of your Volto project. The add-on should be placed in the `onlyoffice-volto` folder.
+Unzip the ONLYOFFICE add-on into the `packages` directory of your Volto project. The add-on should be placed in the `volto` folder.
 
 Update the **volto.config.js** file in the root directory of your project:
 
 ```
 module.exports = {
-  addons: ['onlyoffice-volto'],
+  addons: ['@onlyoffice/volto'],
 };
 ```
 
@@ -67,7 +67,7 @@ Update the **package.json** file in the root directory of your project:
 
 ```
 "dependencies": {
-  "onlyoffice-volto": "workspace:*"
+  "@onlyoffice/volto": "workspace:*"
 },
 ```
 
